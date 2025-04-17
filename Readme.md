@@ -2,6 +2,9 @@
 
 A modern application to download Instagram reels, photos, and posts.
 
+![Instagram Media Downloader](Screenshot%20from%202025-04-16%2023-45-42.png)
+
+
 ## Overview
 
 This is a full-stack project with a Rust backend and a modern React frontend. Users can download Instagram media (reels, photos, posts) by providing URLs.
