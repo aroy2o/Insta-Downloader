@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+/* Neumorphism and gradient styles for instruction card */
+.shadow-neumorphic {
+  box-shadow: 8px 8px 24px #2d1a4a33, -8px -8px 24px #a259ff22;
+}
+.shadow-inner-neumorphic {
+  box-shadow: inset 4px 4px 12px #2d1a4a33, inset -4px -4px 12px #a259ff22;
+}
+
+/* Gradient border for input focus */
+.gradient-border {
+  border: 2px solid transparent;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #a259ff, #f72585, #7209b7);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* Modern font */
+body, html, .font-sans {
+  font-family: 'Inter', 'Poppins', 'Segoe UI', 'Helvetica Neue', Arial, 'sans-serif';
+}
+
+/* Smooth transitions for interactive elements */
+button, input, select, .card-modern {
+  transition: all 0.2s cubic-bezier(.4,0,.2,1);
+}
+
+/* Card style for modern look */
+.card-modern {
+  background: var(--tw-bg-opacity,1) linear-gradient(135deg, #232526 0%, #414345 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 32px 0 #00000022;
+}
+
+/* Animate fadeIn */
+.animate-fadeIn {
+  animation: fadeIn 0.5s cubic-bezier(.4,0,.2,1);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Animate scaleIn for expanded view */
+.animate-scaleIn {
+  animation: scaleIn 0.3s cubic-bezier(.4,0,.2,1);
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Gradient text for title */
+.gradient-text {
+  background: linear-gradient(90deg, #a259ff, #f72585, #7209b7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Floating animation for UI elements */
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Progress animation for loaders */
+.animate-progress {
+  animation: progress 1.5s ease-in-out infinite;
+  background-size: 200% 200%;
+}
+@keyframes progress {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+/* Progress stripe animation */
+.animate-progress-stripe {
+  animation: progress-stripe 1s linear infinite;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 1rem 1rem;
+}
+@keyframes progress-stripe {
+  from { background-position: 1rem 0; }
+  to { background-position: 0 0; }
+}
+
+/* Progress pulse animation */
+.animate-progress-pulse {
+  animation: progress-pulse 1.5s ease-in-out infinite;
+  background-size: 200% 200%;
+}
+@keyframes progress-pulse {
+  0% { background-position: 100% 0; opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { background-position: -100% 0; opacity: 0.6; }
+}
+
+/* Shimmer loading effect */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0%,
+    #f8f8f8 50%,
+    #f0f0f0 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+.dark .shimmer {
+  background: linear-gradient(
+    90deg,
+    #2a2a2a 0%,
+    #3a3a3a 50%,
+    #2a2a2a 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Image shadow effect for media items */
+.img-shadow {
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+}
+
+/* Custom hover scale for cards */
+.hover\:scale-102:hover {
+  transform: scale(1.02);
+}
+
+/* Custom styles for dark mode hover states */
+.dark .dark\:group-hover\:bg-gray-750:group-hover {
+  background-color: #2d3748;
+}
+
+/* Animation for the icon in the download button */
+@keyframes spin-subtle {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-subtle {
+  animation: spin-subtle 2s linear infinite;
+}
+
+/* Pulse effect for buttons */
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+.animate-pulse-ring {
+  animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+/* Bar pulse animations for loading spinner */
+.animate-pulse-bar-1 {
+  animation: pulse-bar 1s ease-in-out infinite;
+}
+.animate-pulse-bar-2 {
+  animation: pulse-bar 1s ease-in-out infinite;
+}
+.animate-pulse-bar-3 {
+  animation: pulse-bar 1s ease-in-out infinite;
+}
+
+@keyframes pulse-bar {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.5); opacity: 0.5; }
+}

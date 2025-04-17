@@ -1,0 +1,31 @@
+[package]
+name = "insta"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["headless_chrome"]
+headless_chrome = []
+
+[dependencies]
+axum = { version = "0.6.18", features = ["multipart"] }
+tower-http = { version = "0.4.1", features = ["cors", "fs", "trace", "timeout"] }
+tokio = { version = "1.28.2", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.11", features = ["json", "stream", "blocking"] }
+chrono = "0.4"
+headless_chrome = "1.0.5"
+fantoccini = "0.19.3"
+futures = "0.3.28"
+futures-util = "0.3.28"
+bytes = "1.4.0"
+regex = "1.11.1"
+url = "2.5.4"
+anyhow = "1.0.75"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+rand = "0.8"
+http = "0.2"
+rusqlite = "0.34.0"
+tower = "0.4"
